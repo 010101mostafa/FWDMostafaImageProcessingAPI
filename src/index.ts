@@ -1,5 +1,5 @@
 import express from "express";
-import * as fs from "fs";
+import { promises as fs } from "fs";
 import path from "path";
 
 import routers from "./routes/.";
@@ -12,17 +12,17 @@ app.listen(3333, () =>
 );
 
 app.use(routers);
-app.use((req, res) => {
+app.use(async (req, res) => {
   const filePath = path.join(path.resolve("./"), "static files/NotFound.html");
-  fs.stat(filePath, function (err, fileInfo) {
-    if (err) {
-      res.status(500);
-      return;
-    }
+  try {
+    const fileInfo = await fs.stat(filePath);
     if (fileInfo.isFile()) {
       res.status(404);
       res.sendFile(filePath);
     }
-  });
+  } catch (err) {
+    res.status(500);
+    return;
+  }
 });
 export default app;
