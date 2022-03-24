@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 
 import Image from "./../models/imagesModel";
 
-const getImage = async (req: Request, res: Response, next: NextFunction) => {
+const getImage = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     let w: number | undefined, h: number | undefined;
     if (req.query.w != undefined) {

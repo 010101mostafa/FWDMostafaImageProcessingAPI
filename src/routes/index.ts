@@ -5,7 +5,7 @@ const MainRouter = express.Router();
 
 MainRouter.use("/images", images);
 
-MainRouter.get("/", (req, res) => {
+MainRouter.get("/", (req: express.Request, res: express.Response): void => {
   res.send("hello to the image processing app");
 });
 
