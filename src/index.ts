@@ -21,7 +21,7 @@ app.use(async (req: express.Request, res: express.Response): Promise<void> => {
       res.sendFile(filePath);
     }
   } catch (err) {
-      res.status(404);
+    res.status(404);
     return;
   }
 });

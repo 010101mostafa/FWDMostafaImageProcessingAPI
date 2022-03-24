@@ -67,7 +67,7 @@ app.use(function (req, res) { return __awaiter(void 0, void 0, void 0, function 
                 return [3 /*break*/, 4];
             case 3:
                 err_1 = _a.sent();
-                res.status(500);
+                res.status(404);
                 return [2 /*return*/];
             case 4: return [2 /*return*/];
         }
