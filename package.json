@@ -7,9 +7,9 @@
     "test": "tsc && jasmine",
     "start": "nodemon --exec npx ts-node src/index.ts",
     "build": "tsc",
-    "lintingAndFormating": "eslint . --ext .ts",
-    "lintingAndFormating:f": "eslint . --ext .ts --fix",
-    "Formating": "prettier . --config .prettierrc --write "
+    "lintingAndFormating": "eslint src/**/*.ts --ext .ts",
+    "lintingAndFormating:f": "eslint src/**/*.ts --ext .ts --fix",
+    "Formating": "prettier src/**/*.ts --config .prettierrc --write "
   },
   "repository": {
     "type": "git",

@@ -3,11 +3,13 @@
     "",
     "\\images",
     "\\images\\full",
+    "\\images\\thumbnail",
     "\\src",
+    "\\src\\controllers",
     "\\src\\models",
     "\\src\\routes",
-    "\\static files"
+    "\\src\\test"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\.eslintrc.json",
   "PreviewInSolutionExplorer": false
 }
